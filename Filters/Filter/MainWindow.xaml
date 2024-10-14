@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp"
+        mc:Ignorable="d"
+        Title="Signal filters" Width="1052" Height="308" MouseWheel="Window_MouseWheel" Background="Black">
+    <Grid Margin="5">
+        <StackPanel>
+            <WrapPanel>
+                <CheckBox Name="cbSignal"  Content="Signal" IsChecked="True" Foreground="Red" Click="CheckBox_Click" Margin="5"/>
+                <CheckBox Name="cbKalman"  Content="Kalman" IsChecked="True" Foreground="Lime" Click="CheckBox_Click" Margin="5"/>
+                <CheckBox Name="cbAlphaBeta"  Content="Alpha-Beta" IsChecked="True" Foreground="DodgerBlue" Click="CheckBox_Click" Margin="5"/>
+            </WrapPanel>
+            <local:DrawingVisualClass x:Name="g" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1022" Background="Black" Height="260" MouseMove="g_MouseMove"/>
+        </StackPanel>
+    </Grid>
+</Window>
